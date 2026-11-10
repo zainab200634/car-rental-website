@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ar" lang="ar" dir="rtl">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>المساعد الذكي لاختيار السيارات - AI Recommendation Assistant</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="myFunctions.js"></script>
+</head>
+<body>
+
+    <!-- شريط التنقل العلوي الفاخر -->
+    <div class="navbar">
+        <div class="nav-container">
+            <a href="home.html" class="nav-brand">
+                🚗 النجم لتأجير السيارات <span class="brand-logo-badge">SVU F25</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="home.html">الرئيسية</a></li>
+                <li><a href="AboutUs.html">من نحن</a></li>
+                <li><a href="Cars.html">السيارات والحجز</a></li>
+                <li><a href="AIFeature.html" class="active">المساعد الذكي</a></li>
+                <li><a href="AIFeature_Report.html">تقرير الميزة</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container" style="max-width: 820px;">
+
+        <!-- البانر التعريفي للمساعد الذكي -->
+        <div class="hero-banner">
+            <span class="hero-tag">ذكاء اصطناعي تفاعلي &bull; AI Recommendation Engine</span>
+            <h1>مستشارك الذكي.<br />لاختيار السيارة الأنسب لرحلتك.</h1>
+            <p>
+                نظام ذكي يحلل احتياجاتك وميزانيتك وعدد الركاب، ويرشح لك السيارة المثالية في ثوانٍ معدودة مع تقديم تبرير منطقي كامل وبدون الحاجة لإعادة تحميل الصفحة.
+            </p>
+        </div>
+
+        <!-- القسم 01: معايير التحليل -->
+        <div class="section-header">
+            <span class="section-number">01</span>
+            <span class="section-title-label">تفضيلات وخيارات الرحلة</span>
+            <span class="section-line"></span>
+        </div>
+
+        <h2>حدد تفضيلاتك وسنقوم بالترشيح الفوري</h2>
+        <div class="info-card info-card-lime">
+            <p style="margin: 0; font-size: 13.5px; color: #12362e;">
+                💡 <strong>آلية الاستخدام:</strong> اختر الهدف من الاستئجار، وحدد عدد الركاب المتوقع والميزانية اليومية، ثم اضغط على زر التحليل لمشاهدة التوصية الفورية مع التعليل.
+            </p>
+        </div>
+
+        <!-- نموذج المساعد الذكي -->
+        <form id="aiAssistantForm" action="#" method="post" onsubmit="return runAIAssistant(event);">
+            <fieldset>
+                <legend>معايير التحليل والمطابقة الذكية</legend>
+
+                <div>
+                    <label for="selPurpose">الهدف الأساسي من الاستئجار:</label>
+                    <select id="selPurpose" name="purpose">
+                        <option value="economy">اقتصادي وتوفير وقود للمشاوير والمهام اليومية داخل المدينة</option>
+                        <option value="family">رحلة عائلية واسعة وسفر مريح ومجهز بين المحافظات</option>
+                        <option value="business">رجال أعمال، مناسبات رسمية ومظهر فاخر</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="numPassengers">عدد الركاب المتوقع:</label>
+                    <input type="number" id="numPassengers" name="passengers" min="1" max="10" value="4" />
+                </div>
+
+                <div>
+                    <label for="numBudget">الميزانية اليومية المتاحة ($ أو ما يعادلها):</label>
+                    <input type="number" id="numBudget" name="budget" min="10" max="1000" value="50" />
+                </div>
+            </fieldset>
+
+            <div style="text-align: center; margin-top: 25px;">
+                <input type="submit" value="تحليل الخيارات وترشيح السيارة المناسبة ⚡" class="btn btn-lime" style="width: 100%; padding: 14px; font-size: 15.5px;" />
+            </div>
+        </form>
+
+        <!-- بطاقة النتيجة التفاعلية عبر jQuery -->
+        <div id="aiResultBox" class="info-card info-card-lime" style="display: none; margin-top: 25px; padding: 30px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(18, 54, 46, 0.12); padding-bottom: 12px; margin-bottom: 15px;">
+                <h3 style="color: #12362e; margin: 0; font-size: 20px;">🚗 نتيجة التحليل والترشيح الذكي:</h3>
+                <span class="badge badge-lime">تطابق عالي 98%</span>
+            </div>
+            
+            <p id="aiCarTitle" style="font-size: 22px; font-weight: 800; color: #12362e; margin: 10px 0;"></p>
+            <p id="aiCarReason" style="font-size: 14.5px; line-height: 1.8; color: #334840; margin-bottom: 20px;"></p>
+            
+            <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                <input type="button" value="إعادة التحليل وتغيير الخيارات" onclick="resetAIAssistant();" class="btn btn-secondary" style="padding: 10px 22px;" />
+                <a href="Cars.html" class="btn btn-lime" style="padding: 10px 24px;">حجز السيارة المختارة من الجدول &larr;</a>
+            </div>
+        </div>
+
+        <div style="margin-top: 40px; text-align: center;">
+            <a href="AIFeature_Report.html" class="btn" style="padding: 12px 28px;">
+                📄 استعراض التقرير التحليلي المعتمد للميزة (تقرير صفحتين) &larr;
+            </a>
+        </div>
+
+    </div>
+
+    <!-- تذييل الصفحة -->
+    <div class="footer">
+        <p>
+            مشروع وظيفة تصميم وتطوير تطبيقات الوب (F25) &copy; 
+            <strong>الجامعة الافتراضية السورية SVU</strong> | 
+            إنجاز الطلاب: زينب الرفاعي، ربى بدران، محمد محجوب، وليد انبوشة، راما دياب، عبدالله زمزم
+        </p>
+    </div>
+
+</body>
+</html>

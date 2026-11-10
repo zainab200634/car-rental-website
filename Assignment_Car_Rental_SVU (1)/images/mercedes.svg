@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" width="400" height="200">
+  <defs>
+    <linearGradient id="mercGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34495e" />
+      <stop offset="100%" stop-color="#17202a" />
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="#f8fafc" rx="10"/>
+  <!-- Wheels -->
+  <circle cx="95" cy="140" r="30" fill="#1b2631" stroke="#bdc3c7" stroke-width="4"/>
+  <circle cx="95" cy="140" r="15" fill="#ecf0f1"/>
+  <circle cx="305" cy="140" r="30" fill="#1b2631" stroke="#bdc3c7" stroke-width="4"/>
+  <circle cx="305" cy="140" r="15" fill="#ecf0f1"/>
+  <!-- Luxury Body -->
+  <path d="M 45 135 L 70 135 A 35 35 0 0 1 120 135 L 280 135 A 35 35 0 0 1 330 135 L 370 135 C 385 135 390 120 380 105 L 350 90 L 275 48 C 260 40 240 40 215 40 L 135 40 C 110 40 95 60 75 88 L 40 102 C 30 110 30 135 45 135 Z" fill="url(#mercGrad)"/>
+  <!-- Windows -->
+  <path d="M 140 46 L 210 46 L 210 82 L 90 82 C 105 62 120 48 140 46 Z" fill="#ebedef"/>
+  <path d="M 218 46 L 268 46 C 280 50 315 78 330 82 L 218 82 Z" fill="#ebedef"/>
+  <!-- Chrome Grill / Lights -->
+  <polygon points="375,108 360,98 365,118" fill="#5dade2"/>
+  <polygon points="35,108 45,102 43,118" fill="#e74c3c"/>
+  <!-- Label -->
+  <text x="200" y="185" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#1b2631" text-anchor="middle">Mercedes C200 2024 (CR-005)</text>
+</svg>

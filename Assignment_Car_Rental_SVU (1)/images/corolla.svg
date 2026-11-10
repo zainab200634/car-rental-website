@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" width="400" height="200">
+  <defs>
+    <linearGradient id="corollaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2980b9" />
+      <stop offset="100%" stop-color="#1b4f72" />
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="#f8fafc" rx="10"/>
+  <!-- Wheels -->
+  <circle cx="100" cy="140" r="28" fill="#2c3e50" stroke="#7f8c8d" stroke-width="4"/>
+  <circle cx="100" cy="140" r="14" fill="#bdc3c7"/>
+  <circle cx="300" cy="140" r="28" fill="#2c3e50" stroke="#7f8c8d" stroke-width="4"/>
+  <circle cx="300" cy="140" r="14" fill="#bdc3c7"/>
+  <!-- Car Body -->
+  <path d="M 50 135 L 75 135 A 35 35 0 0 1 125 135 L 275 135 A 35 35 0 0 1 325 135 L 360 135 C 375 135 380 120 375 110 L 350 95 L 270 55 C 255 45 240 45 220 45 L 140 45 C 120 45 100 65 80 90 L 45 105 C 35 110 35 135 50 135 Z" fill="url(#corollaGrad)"/>
+  <!-- Windows -->
+  <path d="M 145 52 L 215 52 L 215 90 L 95 90 C 110 70 125 55 145 52 Z" fill="#ebf5fb"/>
+  <path d="M 225 52 L 265 52 C 275 55 310 85 325 90 L 225 90 Z" fill="#ebf5fb"/>
+  <!-- Headlights -->
+  <polygon points="365,115 350,105 355,125" fill="#f1c40f"/>
+  <polygon points="40,115 50,110 48,125" fill="#e74c3c"/>
+  <!-- Text Label -->
+  <text x="200" y="185" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#1a5276" text-anchor="middle">Toyota Corolla 2023 (CR-001)</text>
+</svg>

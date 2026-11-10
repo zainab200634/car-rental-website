@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" width="400" height="200">
+  <defs>
+    <linearGradient id="sparkGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f39c12" />
+      <stop offset="100%" stop-color="#d35400" />
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="#f8fafc" rx="10"/>
+  <!-- Wheels -->
+  <circle cx="110" cy="140" r="26" fill="#2c3e50" stroke="#7f8c8d" stroke-width="4"/>
+  <circle cx="110" cy="140" r="13" fill="#bdc3c7"/>
+  <circle cx="290" cy="140" r="26" fill="#2c3e50" stroke="#7f8c8d" stroke-width="4"/>
+  <circle cx="290" cy="140" r="13" fill="#bdc3c7"/>
+  <!-- Compact Hatchback Body -->
+  <path d="M 60 135 L 85 135 A 30 30 0 0 1 135 135 L 265 135 A 30 30 0 0 1 315 135 L 345 135 C 360 135 365 120 360 105 L 340 90 L 290 45 C 280 40 260 38 230 38 L 140 38 C 115 38 85 65 70 95 L 55 105 C 45 115 45 135 60 135 Z" fill="url(#sparkGrad)"/>
+  <!-- Windows -->
+  <path d="M 145 45 L 220 45 L 220 82 L 95 82 C 110 65 125 50 145 45 Z" fill="#fef9e7"/>
+  <path d="M 228 45 L 275 45 C 285 50 310 75 320 82 L 228 82 Z" fill="#fef9e7"/>
+  <!-- Lights -->
+  <polygon points="350,110 335,100 340,120" fill="#f1c40f"/>
+  <polygon points="50,110 60,105 58,120" fill="#e74c3c"/>
+  <!-- Label -->
+  <text x="200" y="185" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#d35400" text-anchor="middle">Chevrolet Spark 2021 (CR-004)</text>
+</svg>
