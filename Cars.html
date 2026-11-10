@@ -1,0 +1,343 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ar" lang="ar" dir="rtl">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>السيارات والحجز - مكتب تأجير السيارات | Cars &amp; Booking</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="myFunctions.js"></script>
+</head>
+<body>
+
+    <!-- شريط التنقل العلوي الفاخر -->
+    <div class="navbar">
+        <div class="nav-container">
+            <a href="home.html" class="nav-brand">
+                🚗 النجم لتأجير السيارات <span class="brand-logo-badge">SVU F25</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="home.html">الرئيسية</a></li>
+                <li><a href="AboutUs.html">من نحن</a></li>
+                <li><a href="Cars.html" class="active">السيارات والحجز</a></li>
+                <li><a href="AIFeature.html">المساعد الذكي</a></li>
+                <li><a href="AIFeature_Report.html">تقرير الميزة</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <!-- البانر التعريفي للسيارات -->
+        <div class="hero-banner">
+            <span class="hero-tag">الأسطول المتاح &bull; موديلات حديثة مفحوصة بالكامل</span>
+            <h1>اختر سيارتك بثقة.<br />واستمتع برحلة آمنة ومريحة.</h1>
+            <p>
+                استعرض تفاصيل السيارات الفنية عبر مكتبة jQuery بنقرة واحدة، حدد سيارة أو أكثر، وتابع لتعبئة طلب الحجز مع الاستفادة من خصم 5% التلقائي للمدد التي تتجاوز 10 أيام!
+            </p>
+        </div>
+
+        <!-- القسم 01: جدول السيارات -->
+        <div class="section-header">
+            <span class="section-number">01</span>
+            <span class="section-title-label">جدول السيارات المتاحة للتأجير (5 بنود مع الصور)</span>
+            <span class="section-line"></span>
+        </div>
+
+        <h2>أسطول السيارات المتوفرة للتأجير الفوري</h2>
+        <p class="field-help">
+            • انقر على مربع <strong>(إظهار التفاصيل)</strong> لمشاهدة المواصفات الفنية للسيارة عبر <em>jQuery</em> دون إعادة تحميل الصفحة (يمكن فتح عدة سيارات معاً).<br />
+            • حدد مربع <strong>(اختيار)</strong> للسيارة أو السيارات المطلوبة ثم اضغط زر <strong>(متابعة لتعبئة الطلب)</strong> ليظهر النموذج في نفس الصفحة.
+        </p>
+
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th style="width: 14%;">معاينة السيارة</th>
+                    <th style="width: 10%;">الرمز</th>
+                    <th style="width: 25%;">الموديل والتصنيف</th>
+                    <th style="width: 11%;">سنة الصنع</th>
+                    <th style="width: 16%;">الأجرة اليومية</th>
+                    <th style="width: 12%;">إظهار التفاصيل</th>
+                    <th style="width: 12%;">اختيار</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- 1. Toyota Corolla -->
+                <tr>
+                    <td><img src="images/corolla.jpg" alt="Toyota Corolla" class="car-thumb" /></td>
+                    <td><strong>CR-001</strong></td>
+                    <td>
+                        <strong>Toyota Corolla</strong><br />
+                        <span class="badge badge-forest">سيدان عملية واقتصادية</span>
+                    </td>
+                    <td>2023</td>
+                    <td><span style="font-weight: 800; color: #12362e;">250,000 ل.س</span></td>
+                    <td>
+                        <input type="checkbox" class="chk-details" data-target="details-cr001" title="إظهار/إخفاء التفاصيل عبر jQuery" />
+                    </td>
+                    <td>
+                        <input type="checkbox" class="chk-select" data-code="CR-001" data-name="Toyota Corolla" data-price="250000" />
+                    </td>
+                </tr>
+                <tr id="details-cr001" class="details-row">
+                    <td colspan="7">
+                        <div class="details-wrapper">
+                            <strong>المواصفات الفنية التفصيلية لسيارة Toyota Corolla 2023 [CR-001]:</strong>
+                            <div class="spec-chips">
+                                <span class="spec-chip">⛽ نوع الوقود: <strong>بنزين 95 اقتصادي</strong></span>
+                                <span class="spec-chip">⚙️ ناقل الحركة: <strong>أوتوماتيك CVT</strong></span>
+                                <span class="spec-chip">👥 عدد المقاعد: <strong>5 مقاعد</strong></span>
+                                <span class="spec-chip">🛣️ عداد الكيلومترات: <strong>15,200 كم</strong></span>
+                                <span class="spec-chip">🎨 اللون: <strong>أزرق كلاسيكي معدني</strong></span>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+
+                <!-- 2. Kia Sportage -->
+                <tr>
+                    <td><img src="images/sportage.jpg" alt="Kia Sportage" class="car-thumb" /></td>
+                    <td><strong>CR-002</strong></td>
+                    <td>
+                        <strong>Kia Sportage</strong><br />
+                        <span class="badge badge-amber">عائلية SUV دفع رباعي</span>
+                    </td>
+                    <td>2022</td>
+                    <td><span style="font-weight: 800; color: #12362e;">400,000 ل.س</span></td>
+                    <td>
+                        <input type="checkbox" class="chk-details" data-target="details-cr002" title="إظهار/إخفاء التفاصيل عبر jQuery" />
+                    </td>
+                    <td>
+                        <input type="checkbox" class="chk-select" data-code="CR-002" data-name="Kia Sportage" data-price="400000" />
+                    </td>
+                </tr>
+                <tr id="details-cr002" class="details-row">
+                    <td colspan="7">
+                        <div class="details-wrapper">
+                            <strong>المواصفات الفنية التفصيلية لسيارة Kia Sportage 2022 [CR-002]:</strong>
+                            <div class="spec-chips">
+                                <span class="spec-chip">⛽ نوع الوقود: <strong>بنزين سوبر</strong></span>
+                                <span class="spec-chip">⚙️ ناقل الحركة: <strong>تيبترونيك 6 سرعات</strong></span>
+                                <span class="spec-chip">👥 عدد المقاعد: <strong>5 مقاعد واسعة</strong></span>
+                                <span class="spec-chip">🛣️ عداد الكيلومترات: <strong>31,500 كم</strong></span>
+                                <span class="spec-chip">🎨 اللون: <strong>أحمر عنابي فاخر</strong></span>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+
+                <!-- 3. Hyundai Elantra -->
+                <tr>
+                    <td><img src="images/elantra.jpg" alt="Hyundai Elantra" class="car-thumb" /></td>
+                    <td><strong>CR-003</strong></td>
+                    <td>
+                        <strong>Hyundai Elantra</strong><br />
+                        <span class="badge badge-lime">سيدان عصرية مريحة</span>
+                    </td>
+                    <td>2024</td>
+                    <td><span style="font-weight: 800; color: #12362e;">300,000 ل.س</span></td>
+                    <td>
+                        <input type="checkbox" class="chk-details" data-target="details-cr003" title="إظهار/إخفاء التفاصيل عبر jQuery" />
+                    </td>
+                    <td>
+                        <input type="checkbox" class="chk-select" data-code="CR-003" data-name="Hyundai Elantra" data-price="300000" />
+                    </td>
+                </tr>
+                <tr id="details-cr003" class="details-row">
+                    <td colspan="7">
+                        <div class="details-wrapper">
+                            <strong>المواصفات الفنية التفصيلية لسيارة Hyundai Elantra 2024 [CR-003]:</strong>
+                            <div class="spec-chips">
+                                <span class="spec-chip">⛽ نوع الوقود: <strong>بنزين ممتاز</strong></span>
+                                <span class="spec-chip">⚙️ ناقل الحركة: <strong>أوتوماتيك 8 سرعات</strong></span>
+                                <span class="spec-chip">👥 عدد المقاعد: <strong>5 مقاعد جلد</strong></span>
+                                <span class="spec-chip">🛣️ عداد الكيلومترات: <strong>8,200 كم (بحالة الوكالة)</strong></span>
+                                <span class="spec-chip">🎨 اللون: <strong>أخضر زيتي ميتاليك</strong></span>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+
+                <!-- 4. Chevrolet Spark -->
+                <tr>
+                    <td><img src="images/spark.jpg" alt="Chevrolet Spark" class="car-thumb" /></td>
+                    <td><strong>CR-004</strong></td>
+                    <td>
+                        <strong>Chevrolet Spark</strong><br />
+                        <span class="badge badge-blue">هاتشباك مدنية ذكية</span>
+                    </td>
+                    <td>2021</td>
+                    <td><span style="font-weight: 800; color: #12362e;">180,000 ل.س</span></td>
+                    <td>
+                        <input type="checkbox" class="chk-details" data-target="details-cr004" title="إظهار/إخفاء التفاصيل عبر jQuery" />
+                    </td>
+                    <td>
+                        <input type="checkbox" class="chk-select" data-code="CR-004" data-name="Chevrolet Spark" data-price="180000" />
+                    </td>
+                </tr>
+                <tr id="details-cr004" class="details-row">
+                    <td colspan="7">
+                        <div class="details-wrapper">
+                            <strong>المواصفات الفنية التفصيلية لسيارة Chevrolet Spark 2021 [CR-004]:</strong>
+                            <div class="spec-chips">
+                                <span class="spec-chip">⛽ نوع الوقود: <strong>بنزين فائق التوفير</strong></span>
+                                <span class="spec-chip">⚙️ ناقل الحركة: <strong>أوتوماتيك</strong></span>
+                                <span class="spec-chip">👥 عدد المقاعد: <strong>4 مقاعد</strong></span>
+                                <span class="spec-chip">🛣️ عداد الكيلومترات: <strong>44,000 كم</strong></span>
+                                <span class="spec-chip">🎨 اللون: <strong>برتقالي رياضي مميز</strong></span>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+
+                <!-- 5. Mercedes C200 -->
+                <tr>
+                    <td><img src="images/mercedes.jpg" alt="Mercedes C200" class="car-thumb" /></td>
+                    <td><strong>CR-005</strong></td>
+                    <td>
+                        <strong>Mercedes C200</strong><br />
+                        <span class="badge badge-forest">فاخرة لرجال الأعمال</span>
+                    </td>
+                    <td>2024</td>
+                    <td><span style="font-weight: 800; color: #12362e;">600,000 ل.س</span></td>
+                    <td>
+                        <input type="checkbox" class="chk-details" data-target="details-cr005" title="إظهار/إخفاء التفاصيل عبر jQuery" />
+                    </td>
+                    <td>
+                        <input type="checkbox" class="chk-select" data-code="CR-005" data-name="Mercedes C200" data-price="600000" />
+                    </td>
+                </tr>
+                <tr id="details-cr005" class="details-row">
+                    <td colspan="7">
+                        <div class="details-wrapper">
+                            <strong>المواصفات الفنية التفصيلية لسيارة Mercedes C200 2024 [CR-005]:</strong>
+                            <div class="spec-chips">
+                                <span class="spec-chip">⛽ نوع الوقود: <strong>بنزين سوبر 98</strong></span>
+                                <span class="spec-chip">⚙️ ناقل الحركة: <strong>أوتوماتيك 9G-Tronic</strong></span>
+                                <span class="spec-chip">👥 عدد المقاعد: <strong>5 مقاعد جلد فاخرة</strong></span>
+                                <span class="spec-chip">🛣️ عداد الكيلومترات: <strong>3,900 كم</strong></span>
+                                <span class="spec-chip">🎨 اللون: <strong>أسود ملوكي فخم</strong></span>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- زر المتابعة بعد اختيار السيارة -->
+        <div style="margin-top: 25px; text-align: left;">
+            <input type="button" id="btnProceed" value="متابعة لتعبئة طلب الحجز ⬇️" class="btn btn-lime" style="padding: 13px 32px;" />
+        </div>
+
+        <!-- ====================================================================
+             القسم 02: استمارة تعبئة بيانات طلب التأجير والقيود (في نفس الصفحة)
+             ==================================================================== -->
+        <div id="orderSection">
+            <div class="section-header">
+                <span class="section-number">02</span>
+                <span class="section-title-label">استمارة تقديم طلب الحجز الإلكتروني</span>
+                <span class="section-line"></span>
+            </div>
+
+            <h2>استمارة تقديم طلب حجز سيارة (مع التحقق والقيود الصارمة)</h2>
+            <div class="info-card info-card-lime">
+                <p class="field-help" style="margin: 0; color: #12362e; font-weight: 600;">
+                    📌 <strong>ضوابط التحقق وفق نص الوظيفة:</strong><br />
+                    • <strong>الرقم الوطني وتاريخا البداية والنهاية:</strong> حقول <strong>إلزامية الإدخال</strong>.<br />
+                    • <strong>الاسم، الموبايل، والبريد الإلكتروني:</strong> حقول تقبل القيمة الفارغة، ولكن إن تمت تعبئتها تخضع للتحقق الصارم.<br />
+                    • عند نجاح التحقق تظهر نافذة إلكترونية ملخصة تتضمن السيارات المختارة، عدد الأيام، وحساب <strong>خصم 5%</strong> في حال تجاوزت مدة التأجير 10 أيام.
+                </p>
+            </div>
+
+            <form action="#" method="post" id="rentalForm" onsubmit="return validateOrderForm();">
+                
+                <!-- استخدام نماذج XHTML المتقدمة (fieldset, legend, label) -->
+                <fieldset>
+                    <legend>بيانات المستأجر والحجز الإلكتروني</legend>
+
+                    <!-- عرض السيارات المحددة -->
+                    <div>
+                        <label for="txtSelectedCarsDisplay">السيارات المختارة من الجدول:</label>
+                        <input type="text" id="txtSelectedCarsDisplay" name="selected_cars" readonly="readonly" style="background-color: #f1f5f3; font-weight: 700; color: #12362e;" />
+                    </div>
+
+                    <!-- 1. الاسم الكامل (أحرف هجائية عربية فقط - اختياري) -->
+                    <div>
+                        <label for="txtFullName">الاسم الكامل لمقدم الطلب (أحرف هجائية عربية فقط):</label>
+                        <input type="text" id="txtFullName" name="full_name" placeholder="مثال: حسام الدين الخالد (حقل اختياري)" />
+                        <span id="errFullName" class="field-error-msg"></span>
+                    </div>
+
+                    <!-- 2. الرقم الوطني (11 خانة - إلزامي الإدخال - أول خانتين 01-14) -->
+                    <div>
+                        <label for="txtNationalId">الرقم الوطني (11 خانة - أول خانتين ترمز للمحافظة 01-14) <span style="color:#b91c1c;">* (إلزامي)</span>:</label>
+                        <input type="text" id="txtNationalId" name="national_id" maxlength="11" placeholder="مثال: 01023456789" />
+                        <span class="field-help">يبدأ برمز المحافظة من 01 (دمشق) إلى 14 (القنيطرة).</span>
+                        <span id="errNationalId" class="field-error-msg"></span>
+                    </div>
+
+                    <!-- 3. تاريخ بداية التأجير (إلزامي) -->
+                    <div>
+                        <label for="txtStartDate">تاريخ بداية التأجير بصيغة (yyyy-mm-dd) <span style="color:#b91c1c;">* (إلزامي)</span>:</label>
+                        <input type="date" id="txtStartDate" name="start_date" />
+                        <span id="errStartDate" class="field-error-msg"></span>
+                    </div>
+
+                    <!-- 4. تاريخ نهاية التأجير (إلزامي ولاحق لتاريخ البداية) -->
+                    <div>
+                        <label for="txtEndDate">تاريخ نهاية التأجير (يجب أن يكون لاحقاً لتاريخ البداية) <span style="color:#b91c1c;">* (إلزامي)</span>:</label>
+                        <input type="date" id="txtEndDate" name="end_date" />
+                        <span id="errEndDate" class="field-error-msg"></span>
+                    </div>
+
+                    <!-- 5. رقم الموبايل (بطاقتي Syriatel و MTN - اختياري) -->
+                    <div>
+                        <label for="txtMobile">رقم الموبايل (يطابق شبكتي Syriatel و MTN):</label>
+                        <input type="text" id="txtMobile" name="mobile" maxlength="10" placeholder="مثال: 0933112233 أو 0944112233 (حقل اختياري)" />
+                        <span class="field-help">يتألف من 10 أرقام ويبدأ بـ 09 لشبكتي سيريتل أو إم تي إن.</span>
+                        <span id="errMobile" class="field-error-msg"></span>
+                    </div>
+
+                    <!-- 6. البريد الإلكتروني (اختياري) -->
+                    <div>
+                        <label for="txtEmail">البريد الإلكتروني:</label>
+                        <input type="text" id="txtEmail" name="email" placeholder="مثال: customer@svu-rental.sy (حقل اختياري)" />
+                        <span id="errEmail" class="field-error-msg"></span>
+                    </div>
+                </fieldset>
+
+                <!-- زر الإرسال والتحقق -->
+                <div style="text-align: center; margin-top: 25px;">
+                    <input type="submit" value="إرسال طلب التأجير وتأكيد الحجز 🚀" class="btn btn-lime" style="padding: 14px 40px; font-size: 15.5px;" />
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <!-- ====================================================================
+         نافذة النتيجة المنبثقة (قسيمة الحجز الإلكترونية - Modal Window)
+         ==================================================================== -->
+    <div id="resultModal" class="modal-backdrop">
+        <div class="modal-dialog">
+            <h2 class="modal-title">🎉 قسيمة تأكيد الحجز الإلكتروني (Invoice Voucher)</h2>
+            <div id="modalBodyContent">
+                <!-- يُحقن محتوى الفاتورة والحسابات ديناميكياً عبر myFunctions.js -->
+            </div>
+            <div style="text-align: center; margin-top: 25px;">
+                <input type="button" id="btnCloseModal" value="إغلاق ومتابعة التصفح" class="btn btn-secondary" style="padding: 10px 28px;" />
+            </div>
+        </div>
+    </div>
+
+    <!-- تذييل الصفحة -->
+    <div class="footer">
+        <p>
+            مشروع وظيفة تصميم وتطوير تطبيقات الوب (F25) &copy; 
+            <strong>الجامعة الافتراضية السورية SVU</strong> | 
+            إنجاز الطلاب: زينب الرفاعي، ربى بدران، محمد محجوب، وليد انبوشة، راما دياب، عبدالله زمزم
+        </p>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" width="400" height="200">
+  <defs>
+    <linearGradient id="sportageGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c0392b" />
+      <stop offset="100%" stop-color="#78281f" />
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="#f8fafc" rx="10"/>
+  <!-- Wheels -->
+  <circle cx="100" cy="140" r="32" fill="#2c3e50" stroke="#95a5a6" stroke-width="5"/>
+  <circle cx="100" cy="140" r="16" fill="#bdc3c7"/>
+  <circle cx="300" cy="140" r="32" fill="#2c3e50" stroke="#95a5a6" stroke-width="5"/>
+  <circle cx="300" cy="140" r="16" fill="#bdc3c7"/>
+  <!-- SUV Car Body -->
+  <path d="M 45 135 L 70 135 A 40 40 0 0 1 130 135 L 270 135 A 40 40 0 0 1 330 135 L 365 135 C 380 135 385 115 380 95 L 360 85 L 300 45 C 290 40 270 38 240 38 L 120 38 C 90 38 75 55 55 85 L 40 95 C 30 105 30 135 45 135 Z" fill="url(#sportageGrad)"/>
+  <!-- Windows -->
+  <path d="M 125 45 L 210 45 L 210 80 L 75 80 C 90 60 105 48 125 45 Z" fill="#eaf2f8"/>
+  <path d="M 220 45 L 285 45 C 300 50 330 75 340 80 L 220 80 Z" fill="#eaf2f8"/>
+  <!-- Roof Rack -->
+  <rect x="130" y="32" width="140" height="5" fill="#34495e" rx="2"/>
+  <!-- Headlights -->
+  <polygon points="375,100 360,90 365,110" fill="#f39c12"/>
+  <polygon points="35,100 45,95 43,110" fill="#c0392b"/>
+  <!-- Text Label -->
+  <text x="200" y="185" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#78281f" text-anchor="middle">Kia Sportage 2022 (CR-002)</text>
+</svg>

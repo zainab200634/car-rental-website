@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" width="400" height="200">
+  <defs>
+    <linearGradient id="elantraGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#27ae60" />
+      <stop offset="100%" stop-color="#145a32" />
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="#f8fafc" rx="10"/>
+  <!-- Wheels -->
+  <circle cx="95" cy="140" r="28" fill="#2c3e50" stroke="#7f8c8d" stroke-width="4"/>
+  <circle cx="95" cy="140" r="14" fill="#bdc3c7"/>
+  <circle cx="305" cy="140" r="28" fill="#2c3e50" stroke="#7f8c8d" stroke-width="4"/>
+  <circle cx="305" cy="140" r="14" fill="#bdc3c7"/>
+  <!-- Sleek Sedan Body -->
+  <path d="M 45 135 L 70 135 A 35 35 0 0 1 120 135 L 280 135 A 35 35 0 0 1 330 135 L 365 135 C 380 135 385 120 375 105 L 340 90 L 260 50 C 245 42 225 42 210 42 L 135 42 C 115 42 95 65 75 90 L 40 105 C 30 115 30 135 45 135 Z" fill="url(#elantraGrad)"/>
+  <!-- Windows -->
+  <path d="M 140 48 L 210 48 L 210 85 L 90 85 C 105 65 120 50 140 48 Z" fill="#e8f8f5"/>
+  <path d="M 218 48 L 255 48 C 265 52 300 80 315 85 L 218 85 Z" fill="#e8f8f5"/>
+  <!-- Lights -->
+  <polygon points="370,110 355,100 360,120" fill="#f1c40f"/>
+  <polygon points="35,110 45,105 42,120" fill="#e74c3c"/>
+  <!-- Label -->
+  <text x="200" y="185" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#145a32" text-anchor="middle">Hyundai Elantra 2024 (CR-003)</text>
+</svg>
